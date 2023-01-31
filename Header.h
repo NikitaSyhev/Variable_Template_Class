@@ -6,11 +6,8 @@ class SomeType {
 public:
 
 	void sum_all(Args... args) {
-		Args sum = 0;
-		sum = args + args + args;
+	
+		auto sum = (args+...);
 		std::cout << "Sum = " << sum << std::endl;
 	};
-
-private:
-	Args _num;
 };	
